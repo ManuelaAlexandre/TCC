@@ -1,0 +1,30 @@
+object DataModule1: TDataModule1
+  Height = 480
+  Width = 640
+  object Driver: TFDPhysMySQLDriverLink
+    VendorLib = 'C:\FriendHeart\lib\libmySQL.dll'
+    OnDriverCreated = DriverDriverCreated
+    Left = 152
+    Top = 40
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 72
+    Top = 40
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=pi353friendheart_'
+      'User_Name=root'
+      'DriverID=MySQL')
+    LoginPrompt = False
+    Left = 72
+    Top = 112
+  end
+  object tb_ong: TFDTable
+    Connection = FDConnection1
+    TableName = 'pi353friendheart_.usu_ong'
+    Left = 424
+    Top = 56
+  end
+end

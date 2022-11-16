@@ -1,0 +1,65 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 475
+  ClientWidth = 677
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object rd_tipoDoacao: TDBRadioGroup
+    Left = 16
+    Top = 56
+    Width = 225
+    Height = 129
+    Caption = 'Tipo de Doa'#231#227'o'
+    DataField = 'tipo_doa'#231'ao'
+    DataSource = dm.ds_con_ong
+    Items.Strings = (
+      'Dinheiro '
+      'Produtos de Higenie '
+      'Roupas '
+      'Alimentos')
+    TabOrder = 0
+    OnChange = rd_tipoDoacaoChange
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 242
+    Width = 433
+    Height = 225
+    Color = clAqua
+    DataSource = dm.ds_con_ong
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id_ong'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nome_ong'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'celular_ong'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tipo_doa'#231'ao'
+        Visible = True
+      end>
+  end
+end

@@ -1,0 +1,18 @@
+program FriendsHeart;
+
+uses
+  Vcl.Forms,
+  U_principal in 'fontes\U_principal.pas' {Form1},
+  U_dm in 'fontes\U_dm.pas' {DataModule1: TDataModule},
+  U_cdOng in 'fontes\U_cdOng.pas' {Form2};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.
